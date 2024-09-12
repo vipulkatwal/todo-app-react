@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+body {
+	background-color: #17181f;
+	color: #ddd;
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+	box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+	max-width: 400px;
+	margin: 40px auto;
+	padding: 20px;
+	background-color: #20212b;
+	border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1,
+h2 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #fff;
+	font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+	border: 2px solid #30313d;
+	border-radius: 8px;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+	background-color: #262731;
+	height: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form input[type="text"] {
+	background: none;
+	color: #fff;
+	border: none;
+	padding: 10px 12px;
+	font-size: 16px;
+	width: calc(100% - 40px);
+	height: 40px;
+	border-radius: 8px;
+	margin-right: 5px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+}
+
+form button {
+	background-color: #61dafb;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	padding: 0;
+	width: 25px;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	color: #20212b;
+	font-weight: bold;
+}
+
+form button:hover {
+	background-color: #4fb8e4;
+}
+
+div.task {
+	background-color: #30313d;
+	border-radius: 8px;
+	padding: 8px 12px;
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	height: 50px;
+}
+
+div.task svg {
+	height: 20px;
+	margin-right: 10px;
+	fill: #61dafb;
+}
+
+div.task.done {
+	opacity: 0.5;
+}
+
+div.task.done .task-name {
+	text-decoration: line-through;
+}
+
+div.task-name,
+div.task form {
+	flex-grow: 1;
+	color: #ddd;
+	font-weight: 500;
+}
+
+div.checkbox {
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+}
+
+button.trash {
+	background: none;
+	border: none;
+	display: flex;
+	cursor: pointer;
+	padding: 6px;
+	margin-left: 10px;
+}
+
+button.trash svg {
+	fill: #888;
+	height: 16px;
+}
+
+button.trash:hover svg {
+	fill: #fff;
+}
+
+div.task input {
+	border: 2px solid #555;
+	border-radius: 5px;
+	padding: 5px 8px;
+	width: 70%;
+	background-color: #20212b;
+	color: #ddd;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
 }
